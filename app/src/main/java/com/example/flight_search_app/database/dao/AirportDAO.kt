@@ -18,7 +18,7 @@ interface AirportDAO {
     @Query("SELECT * FROM Airport WHERE id=:airPlaneId")
     suspend fun getAirline(airPlaneId: Int): Airport?
 
-    @Query("Select * FROM Airport WHERE name like :s")
-    suspend fun getAirlineDetailsWith(s: String): List<Airport>
+    @Query("Select * FROM Airport WHERE name like :query OR iata_code like :query")
+    suspend fun getAirlineDetailsWith(query: String): List<Airport>
 
 }

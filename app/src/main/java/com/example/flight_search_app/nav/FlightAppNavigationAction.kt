@@ -14,6 +14,3 @@ class FlightAppNavigationAction (val navigationController: NavController){
         navigationController.navigate(destination.route)
     }
 }
-
-
-
